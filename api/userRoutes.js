@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { getAllUser, getUserById, createUser, updateUser, deleteUser, addFriend, deleteFriend } = require('e:/social api on mongo/social-network-mongoDB/controllers/userController');
+const { getAllUser, getUserById, createUser, updateUser, deleteUser, addFriend, deleteFriend } = require('../controllers/userController');
 // all the routes for users and friends
 router.route('/').get(getAllUser).post(createUser);
 router.route('/:id').get(getUserById).put(updateUser).delete(deleteUser);
